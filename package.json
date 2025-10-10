@@ -17,5 +17,6 @@
 	"devDependencies": {
 		"@types/node": "^24.7.1",
 		"wrangler": "^4.42.2"
-	}
+	},
+	"packageManager": "yarn@4.10.3"
 }
