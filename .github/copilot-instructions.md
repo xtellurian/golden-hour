@@ -61,7 +61,7 @@ The "golden hour" refers to the first hour after birth, emphasizing the importan
 - Ensure fast loading times for mobile users
 
 ### SEO Considerations
-- Target local SEO keywords: "birth doula Fremantle", "lactation consultant Perth", "antenatal classes WA"
+- Target local SEO keywords: "lactation consultant Perth", "antenatal classes WA", "lactation support Fremantle"
 - Implement proper meta tags, structured data
 - Use semantic HTML for accessibility
 - Optimize images with alt text describing supportive care scenes
