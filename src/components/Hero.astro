@@ -1,0 +1,74 @@
+---
+// Hero Section Component
+---
+
+<section class="hero">
+	<div class="container">
+		<div class="hero-content">
+			<h1>Nurturing Families Through The Golden Hour</h1>
+			<p class="hero-subtitle">
+				Professional lactation consultation and antenatal education in Fremantle, Western Australia
+			</p>
+			<div class="hero-cta">
+				<a href="#services" class="button">Explore Services</a>
+				<a href="#contact" class="button button-secondary">Get In Touch</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		padding: var(--spacing-2xl) 0;
+		background: linear-gradient(135deg, #FDFBF7 0%, #F5F1E8 100%);
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+	
+	.hero-content {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.hero h1 {
+		color: var(--color-primary-dark);
+		margin-bottom: var(--spacing-md);
+	}
+	
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-light);
+		margin-bottom: var(--spacing-xl);
+		line-height: 1.8;
+	}
+	
+	.hero-cta {
+		display: flex;
+		gap: var(--spacing-md);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	@media (min-width: 768px) {
+		.hero {
+			min-height: 70vh;
+		}
+	}
+	
+	@media (max-width: 767px) {
+		.hero {
+			padding: var(--spacing-xl) 0;
+		}
+		
+		.hero-cta {
+			flex-direction: column;
+			align-items: stretch;
+		}
+		
+		.hero-cta .button {
+			width: 100%;
+		}
+	}
+</style>

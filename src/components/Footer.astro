@@ -1,0 +1,35 @@
+---
+// Footer Component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container">
+		<p>&copy; {currentYear} The Golden Hour Co. All rights reserved.</p>
+		<p class="disclaimer">
+			The information provided is for educational purposes and does not replace professional medical advice. 
+			Always consult with your healthcare provider.
+		</p>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		padding: var(--spacing-lg) 0;
+		background-color: var(--color-primary-dark);
+		color: var(--color-background);
+		text-align: center;
+	}
+	
+	.footer p {
+		margin-bottom: var(--spacing-xs);
+		font-size: 0.875rem;
+	}
+	
+	.disclaimer {
+		font-size: 0.75rem;
+		opacity: 0.8;
+		max-width: 600px;
+		margin: var(--spacing-sm) auto 0;
+	}
+</style>

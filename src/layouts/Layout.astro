@@ -1,22 +1,174 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "The Golden Hour Co | Lactation & Antenatal Support in Fremantle", 
+	description = "Professional lactation consultation and antenatal education in Fremantle, Western Australia. Empowering families during the precious golden hour and beyond."
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		
+		<!-- SEO Meta Tags -->
+		<meta name="keywords" content="lactation consultant Perth, lactation consultant Fremantle, antenatal classes WA, breastfeeding support, postpartum care, golden hour, IBCLC" />
+		<meta name="author" content="The Golden Hour Co" />
+		
+		<!-- Open Graph / Social Media -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:locale" content="en_AU" />
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		/* Color palette - warm, nurturing, trustworthy */
+		--color-primary: #8B6F47; /* Warm earth tone */
+		--color-primary-light: #A89078;
+		--color-primary-dark: #6B5537;
+		--color-secondary: #C9A88A; /* Soft beige */
+		--color-accent: #D4A574; /* Golden accent */
+		--color-background: #FDFBF7; /* Warm white */
+		--color-text: #2D2D2D; /* Warm black */
+		--color-text-light: #5A5A5A;
+		--color-white: #FFFFFF;
+		
+		/* Typography */
+		--font-heading: 'Playfair Display', serif;
+		--font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		
+		/* Spacing */
+		--spacing-xs: 0.5rem;
+		--spacing-sm: 1rem;
+		--spacing-md: 1.5rem;
+		--spacing-lg: 2rem;
+		--spacing-xl: 3rem;
+		--spacing-2xl: 4rem;
+		
+		/* Container */
+		--container-max: 1200px;
+		--container-padding: 1rem;
+	}
+	
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	
+	html {
+		scroll-behavior: smooth;
+	}
+	
 	html,
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
+		background-color: var(--color-background);
+		color: var(--color-text);
+		font-family: var(--font-body);
+		line-height: 1.6;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-heading);
+		font-weight: 600;
+		line-height: 1.2;
+		color: var(--color-text);
+		margin-bottom: var(--spacing-md);
+	}
+	
+	h1 {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+	}
+	
+	h2 {
+		font-size: clamp(1.75rem, 4vw, 2.5rem);
+	}
+	
+	h3 {
+		font-size: clamp(1.5rem, 3vw, 2rem);
+	}
+	
+	p {
+		margin-bottom: var(--spacing-sm);
+	}
+	
+	a {
+		color: var(--color-primary);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	
+	a:hover {
+		color: var(--color-primary-dark);
+	}
+	
+	button, .button {
+		display: inline-block;
+		padding: 0.875rem 2rem;
+		background-color: var(--color-primary);
+		color: var(--color-white);
+		border: none;
+		border-radius: 4px;
+		font-family: var(--font-body);
+		font-size: 1rem;
+		font-weight: 500;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		text-decoration: none;
+	}
+	
+	button:hover, .button:hover {
+		background-color: var(--color-primary-dark);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+	}
+	
+	.button-secondary {
+		background-color: transparent;
+		color: var(--color-primary);
+		border: 2px solid var(--color-primary);
+	}
+	
+	.button-secondary:hover {
+		background-color: var(--color-primary);
+		color: var(--color-white);
+	}
+	
+	.container {
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+	}
+	
+	@media (min-width: 768px) {
+		:root {
+			--container-padding: 2rem;
+		}
 	}
 </style>

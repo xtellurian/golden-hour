@@ -1,0 +1,158 @@
+---
+// Services Section Component
+---
+
+<section id="services" class="services">
+	<div class="container">
+		<div class="section-header">
+			<h2>Our Services</h2>
+			<p class="section-intro">
+				Evidence-based care and personalised support for every stage of your journey into parenthood
+			</p>
+		</div>
+		
+		<div class="services-grid">
+			<!-- Lactation Consultation -->
+			<article class="service-card">
+				<div class="service-icon" aria-hidden="true">🤱</div>
+				<h3>Lactation Consultation</h3>
+				<p>
+					Expert breastfeeding support from an experienced lactation consultant. 
+					Whether you're just starting or facing challenges, we're here to help you achieve your feeding goals.
+				</p>
+				<ul class="service-features">
+					<li>Initial feeding assessments</li>
+					<li>Latch and positioning support</li>
+					<li>Problem-solving sessions</li>
+					<li>Follow-up consultations</li>
+				</ul>
+				<a href="#contact" class="service-link">Learn more →</a>
+			</article>
+
+			<!-- Antenatal Education -->
+			<article class="service-card">
+				<div class="service-icon" aria-hidden="true">📚</div>
+				<h3>Antenatal Education</h3>
+				<p>
+					Comprehensive childbirth and parenting education to help you feel confident and prepared. 
+					Classes designed for expectant parents at any stage of pregnancy.
+				</p>
+				<ul class="service-features">
+					<li>Childbirth preparation</li>
+					<li>Newborn care basics</li>
+					<li>Feeding options overview</li>
+					<li>Postpartum preparation</li>
+				</ul>
+				<a href="#contact" class="service-link">Learn more →</a>
+			</article>
+
+			<!-- Postpartum Care -->
+			<article class="service-card">
+				<div class="service-icon" aria-hidden="true">💝</div>
+				<h3>Postpartum Care</h3>
+				<p>
+					Ongoing support during the fourth trimester and beyond. 
+					We help you navigate the transition to parenthood with practical guidance and emotional support.
+				</p>
+				<ul class="service-features">
+					<li>In-home postnatal visits</li>
+					<li>Newborn care guidance</li>
+					<li>Recovery support</li>
+					<li>Family adjustment help</li>
+				</ul>
+				<a href="#contact" class="service-link">Learn more →</a>
+			</article>
+		</div>
+	</div>
+</section>
+
+<style>
+	.services {
+		padding: var(--spacing-2xl) 0;
+		background-color: var(--color-white);
+	}
+	
+	.section-header {
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto var(--spacing-xl);
+	}
+	
+	.section-intro {
+		font-size: 1.125rem;
+		color: var(--color-text-light);
+	}
+	
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--spacing-lg);
+		margin-top: var(--spacing-xl);
+	}
+	
+	.service-card {
+		background: var(--color-background);
+		padding: var(--spacing-lg);
+		border-radius: 8px;
+		border: 1px solid #E8E2D5;
+		transition: all 0.3s ease;
+	}
+	
+	.service-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 24px rgba(139, 111, 71, 0.15);
+		border-color: var(--color-secondary);
+	}
+	
+	.service-icon {
+		font-size: 3rem;
+		margin-bottom: var(--spacing-md);
+	}
+	
+	.service-card h3 {
+		color: var(--color-primary-dark);
+		margin-bottom: var(--spacing-sm);
+	}
+	
+	.service-card > p {
+		color: var(--color-text-light);
+		margin-bottom: var(--spacing-md);
+	}
+	
+	.service-features {
+		list-style: none;
+		margin-bottom: var(--spacing-md);
+	}
+	
+	.service-features li {
+		padding: var(--spacing-xs) 0;
+		color: var(--color-text-light);
+		position: relative;
+		padding-left: 1.5rem;
+	}
+	
+	.service-features li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--color-accent);
+		font-weight: bold;
+	}
+	
+	.service-link {
+		display: inline-block;
+		color: var(--color-primary);
+		font-weight: 500;
+		transition: transform 0.2s ease;
+	}
+	
+	.service-link:hover {
+		transform: translateX(4px);
+	}
+	
+	@media (max-width: 767px) {
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
