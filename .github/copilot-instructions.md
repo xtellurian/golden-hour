@@ -12,7 +12,7 @@ You are working on "The Golden Hour Co" website - a static website for a birth, 
 
 ## Tech Stack
 - **Framework**: Astro 5.x (Static Site Generator)
-- **Deployment**: Cloudflare Pages with Cloudflare adapter
+- **Deployment**: Cloudflare Workers
 - **Package Manager**: Yarn 4.x
 - **TypeScript**: Enabled with strict typing
 - **Styling**: (To be determined - likely CSS/SCSS or Tailwind)
@@ -90,7 +90,7 @@ The "golden hour" refers to the first hour after birth, emphasizing the importan
 
 ### Build & Deploy
 - Use `yarn dev` for development
-- Deploy via `yarn deploy` to Cloudflare Pages
+- Deploy via GitHub Cloudflare
 - Ensure static generation for optimal performance
 - Test responsive breakpoints: mobile (375px), tablet (768px), desktop (1200px+)
 
