@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import { getLocalBusinessSchema, getWebSiteSchema } from '../data/structuredData';
 
 interface Props {
 	title?: string;
@@ -15,6 +16,10 @@ const {
 
 // Build canonical URL from current page path
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).href;
+
+// Get structured data
+const localBusinessSchema = getLocalBusinessSchema();
+const webSiteSchema = getWebSiteSchema();
 ---
 
 <!doctype html>
@@ -44,6 +49,12 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).href;
 
 		<!-- sitemap -->
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		
+		<!-- Structured Data - Local Business Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+		
+		<!-- Structured Data - Website Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
 		
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
