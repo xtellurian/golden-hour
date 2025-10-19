@@ -5,6 +5,11 @@ Astro Docs are available for reference: https://docs.astro.build/llms.txt
 ## Project Overview
 You are working on "The Golden Hour Co" website - a static website for a birth, antenatal, and lactation service based in Fremantle, Western Australia. This is a healthcare service provider specializing in supporting new mothers and families during the precious early period after birth.
 
+## Key info
+- **Business Name**: The Golden Hour Co
+- **Location**: Fremantle, Western Australia
+- **Website URL**: https://thegoldenhourco.net
+
 ## Tech Stack
 - **Framework**: Astro 5.x (Static Site Generator)
 - **Deployment**: Cloudflare Pages with Cloudflare adapter
