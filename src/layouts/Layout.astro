@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import { getLocalBusinessSchema, getWebSiteSchema } from '../data/structuredData';
+import favicon from '../assets/favicon.png';
 
 interface Props {
 	title?: string;
@@ -27,7 +28,7 @@ const webSiteSchema = getWebSiteSchema();
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href={favicon.src} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
