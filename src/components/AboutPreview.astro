@@ -4,6 +4,11 @@
 
 <section id="about" class="about-preview">
 	<div class="container">
+		<div class="about-hero">
+			<picture>
+				<img src="/ellie-hq.jpg" alt="Ellie Cullity, midwife and lactation consultant, smiling" loading="lazy" decoding="async" />
+			</picture>
+		</div>
 		<div class="about-content">
 			<h2>Meet Ellie Cullity</h2>
 			<p class="intro">
@@ -55,5 +60,26 @@
 		font-weight: 500;
 		color: var(--color-primary-dark);
 		margin-bottom: var(--spacing-lg);
+	}
+
+	/* Hero image styles */
+	.about-hero {
+		max-width: 650px;
+		margin: 0 auto var(--spacing-lg);
+		overflow: hidden;
+		border-radius: 12px;
+	}
+
+	.about-hero img {
+		display: block;
+		width: 100%;
+		height: auto;
+		/* make sure she doesn't get huge */
+		max-height: 55vh;
+		/* make sure her face doesn't get chopped in half */
+		min-height: 500px;
+		object-fit: cover;
+		/* keep the top of the image visible when cropping */
+		object-position: top;
 	}
 </style>
