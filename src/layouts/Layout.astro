@@ -6,12 +6,16 @@ interface Props {
 	title?: string;
 	description?: string;
 	canonical?: string;
+	ogImage?: string;
+	ogType?: string;
 }
 
 const { 
 	title = "The Golden Hour Co | Lactation & Antenatal Support in Fremantle", 
 	description = "Professional lactation consultation and antenatal education in Fremantle, Western Australia. Empowering families during the precious golden hour and beyond.",
-	canonical
+	canonical,
+	ogImage = "/og-image.jpg",
+	ogType = "website"
 } = Astro.props;
 
 // Build canonical URL from current page path
@@ -49,17 +53,27 @@ const webSiteSchema = getWebSiteSchema();
 		<!-- SEO Meta Tags -->
 		<meta name="keywords" content="lactation consultant Perth, lactation consultant Fremantle, antenatal classes WA, breastfeeding support, childbirth education, golden hour, IBCLC" />
 		<meta name="author" content="The Golden Hour Co" />
-		
-		<!-- Open Graph / Social Media -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:locale" content="en_AU" />
-		<meta property="og:site_name" content="The Golden Hour Co" />
-
-		<!-- sitemap -->
-		<link rel="sitemap" href="/sitemap-index.xml" />
+	<meta name="geo.region" content="AU-WA" />
+	<meta name="geo.placename" content="Fremantle" />
+	<meta name="geo.position" content="-32.0569;115.7439" />
+	<meta name="ICBM" content="-32.0569, 115.7439" />
+	
+	<!-- Open Graph / Social Media -->
+	<meta property="og:type" content={ogType} />
+	<meta property="og:url" content={canonicalURL} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+	<meta property="og:image:alt" content="The Golden Hour Co - Lactation and Antenatal Support" />
+	<meta property="og:locale" content="en_AU" />
+	<meta property="og:site_name" content="The Golden Hour Co" />
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
+	<meta name="twitter:image:alt" content="The Golden Hour Co - Lactation and Antenatal Support" />
 		
 		<!-- Structured Data - Local Business Schema -->
 		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />

@@ -5,9 +5,12 @@ import Services from '../components/Services.astro';
 import AboutPreview from '../components/AboutPreview.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+
+const seoTitle = "The Golden Hour Co | Lactation Consultant & Antenatal Classes Fremantle";
+const seoDescription = "Professional lactation consultant and antenatal educator in Fremantle, WA. IBCLC certified breastfeeding support, childbirth education, and postnatal care for Perth families.";
 ---
 
-<Layout>
+<Layout title={seoTitle} description={seoDescription}>
 	<Hero />
 	<Services />
 	<AboutPreview />

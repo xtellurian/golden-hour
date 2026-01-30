@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutPreview from '../components/AboutPreview.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const seoTitle = "About The Golden Hour Co | IBCLC Lactation Consultant Fremantle";
+const seoDescription = "Meet your IBCLC certified lactation consultant and antenatal educator in Fremantle. Learn about our evidence-based, compassionate approach to supporting families.";
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+	<AboutPreview />
+	<Contact />
+	<Footer />
+</Layout>
